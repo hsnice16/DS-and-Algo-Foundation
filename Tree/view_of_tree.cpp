@@ -194,7 +194,6 @@ void bottom_view(Node *root)
             root = q.front();
             hd = root->hd;
 
-            // if not encounter before
             m[hd] = root->key;
 
             // if left child exist
