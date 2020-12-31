@@ -7,7 +7,7 @@
     2.) The diameter of T's right subtree
     3.) The longest path between leaves that goes through the root
         of T(this can be computed from the heights of the subtrees of T).
-        longest path = 1 + height of subtree of nd + height of right subtree of nd
+        longest path = 1 + height of left subtree of nd + height of right subtree of nd
 */
 
 #include <algorithm>
