@@ -5,3 +5,4 @@ Contains files, I created during my learning of DS and Algo Foundation from Geek
 
 ## Some articles I wrote during this learning :
 * [XOR linked list](https://himanshu-singh.medium.com/memory-efficient-version-of-doubly-linked-list-a0f05160c81d)
+* [Method 5 : Sliding Window Maximum problem (Improvement)](https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/)
