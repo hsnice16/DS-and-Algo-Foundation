@@ -1,0 +1,72 @@
+Binary Heap 
+
+    Used in : 
+        1)  Heap Sort
+        2)  for implementing priority queue
+
+    Two Types :
+        1)  Min Heap : item with lowest value assigned has high priority
+        2)  Max Heap : item with highest value assigned has high priority
+
+
+    Binary Heap is a complete binary tree (stored as an array).
+                10
+             /      \
+            20      30
+          /   \    /
+         40    50  60
+
+    In array :  | 10 | 20 | 30 | 40 | 50 | 60 |
+
+    left child ( of index i ) is at : 2*i + 1 index
+    right child ( of index i ) is at : 2*i + 2 index
+    parent child ( of index i ) is at : floor ( (i-1) / 2 )   index
+
+    for example :
+        left (1) = 2*1 + 1
+                 = 3
+                 = 40
+        right(1) = 2*1 + 2
+                 = 4
+                 = 50
+        parent(5) = floor ( (5-1) / 2)
+                  = 2
+                  = 30
+
+    Advantages of array representation :
+        1 ) items are at contiguous location (random access)
+        2 ) cache friendly ( locality of reference )
+        3 ) minimum possible height ( complete binary tree )
+
+
+Min Heap 
+
+    Properties :
+        1 ) Complete Binary Tree 
+        2 ) Every node has value smaller than its descendent
+        3 ) Internal representation is like array ( memory representation )
+
+    Example : 
+        logical representation (or pictorial):            2
+                                                        /   \
+                                                        4    8
+                                                       / \  / \
+                                                      6   5 9 10
+                                                     / \
+                                                    100 200
+
+        In array : | 2 | 4 | 8 | 6 | 5 | 9 | 10 | 100 | 200 |
+
+
+Build Heap Time Complexity Explaination :
+    we are considering : 
+             *          -> h = 2
+            / \
+           *   *        -> h = 1
+          / \
+         *   *          -> h = 0
+    Maximum number of nodes at height h = ceil (size / ( 2 ^ ( h + 1 )))
+    Total time : summation (from h = 1 to log|size|) Maximum number of nodex at height h * O (height)
+                O(n * summation (from h = 1 to log|size|) h / 2 ^(h+1))
+                O(n)
+                left has value 1 (if we find summation till infinity).
