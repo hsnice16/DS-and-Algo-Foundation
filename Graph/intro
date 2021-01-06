@@ -1,0 +1,125 @@
+GRAPH
+    Uses :
+        1) to represent friendship relationship (not parent child like Tree)
+        2) to represent random connection between nodes (anybody to anybody)
+
+    Represented by pair of set
+        G - (V, E)
+             ^  ^
+        Vertex  Edge set
+         set
+
+        v1 - v3 
+                \
+        |    |    v5       -> Undirected Graph
+                /
+        v2 -  v4
+
+        V - {v1 ,v2, v3, v4, v5}
+        E - {(v1, v2), (v2, v4), (v4, v5), (v5, v3), (v3, v1), (v3, v4)}
+
+        IN UNDIRECTED GRAPH :
+            (v1, v2) - is unordered pair [v1 -> v2 and v2 -> v1]
+        IN DIRECTED GRAPH :
+            (v1, v2) - is ordered pair [v1 -> v2]
+
+    Some Terms :
+        For Undirected Graph:
+            degree(Vertex)                      = number of edges connected with it
+            
+            sum of all degrees                  = 2 * |number of Edge|
+            
+            maximum number of edges             = (|number of Vertex| * (|number of Vertex| -1 )) / 2
+            in a complete undirected graph 
+            (every node connected to every other node)
+
+        For Directed Graph:
+            indegree(vertex)        = number of edges coming to it  
+
+            outdegree(vertex)       = number of edges going through it
+
+            sum of all indegrees    = |number of Edge|
+            sum of all outdegress   = |number of Edge|
+
+            maximum number of edges =  |number of Vertex| * (|number of Vertex| - 1)
+
+    Walk (Path) :   vertex we get while travelling through the
+                    edges of the graph (repeatition of edge, 
+                    hence of vertex allow). for ex : v1, v2, v4, v2 
+    
+    Path (Simple Path) :    a walk in which repeatition of edge and hence of vertexes are not allowed
+                            for ex : v1, v2, v4
+
+    Cyclic  :   a path exist in the graph which starts and end with same vertex.
+                Can be directed or undirected.
+
+    Acyclic :   not a Cyclic, can be directed (DAG) or undirected.
+
+    Types :
+        Weighted Graph:
+            - weight assign to edge 
+            - can be directed or Undirected
+
+        Unweighted Graph:
+            - weight does not assign to edge
+            - can be directed or undirected
+
+
+GRAPH REPRESENTATION
+
+    1)  Adjacency Matrix :
+            size of matrix(m) = |V| * |V|
+            |V| = number of vertices in graph
+
+            For undirected graph :  this is a symmetric graph
+            For directed graph : may or may not symmetric graph
+
+            m[i][j] = 1  -> if there is an edge from vertex i to vertex j
+                            
+                            and
+
+                    = 0  -> if there is no edge from vertex i to vertex j
+
+        Handling vertices with arbitrary names (string) :
+            - Two data structures required
+            - one is must and other for efficient operation
+            - an array to map , index -> string name
+            - a hash table to map , string name -> index 
+
+        Properties of Adjacency Matrix Representation :
+            Space required : theta (V * V)
+            Operations :
+                check if u and v are adjacent = theta (1)
+                Find all vertices adjacent to u = theta (V)
+                Find degree of u = theta (V)
+                Add / Remove an Edge = theta (1)
+                Add / Remove a vertex = theta (v^2)
+
+        Problems with Adjacency Representation :
+            storing redundant information (from which vertex is not connected)
+
+    2)  Adjacency List:
+            - store only adjancent vertex information
+            - operation find all adjacent vertex is fast in it
+
+            it is basically an array of list , where list can be :
+                1)  dynamic size array
+                    Adv. :
+                        - cache friendliness
+                        - ease of implementation
+                    DisAdv. :
+                        - wastage of Space
+                        - some operation may be costlier
+
+                2)  linked list
+
+            Properties of Adjacency List Representation :
+                Space require : 
+                    for undirected graph - theta (V + 2*E) (one edge fills two cell in array)
+                    for directed graph - theta (V + E)
+                Operations :
+                    check if u and v are adjacent = O(V)
+                    Find all vertices adjancent to u = theta (degree (u)) (and outdegree (u) for directed)
+                    Find degree of u = theta (1)
+                    Add / Remove an Edge = theta (1)
+                    Add / Remove a vertex = O(V)
