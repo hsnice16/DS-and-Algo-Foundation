@@ -1,6 +1,3 @@
----
-output: github_document 
----
 # DS-and-Algo-Foundation
 Programs of learning (GeeksForGeeks)
 
