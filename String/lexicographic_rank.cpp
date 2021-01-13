@@ -23,7 +23,7 @@ int fact(int n)
 int find_lexico_rank(string &str)
 {
     int rank = 1;
-    int len = str.length(); // string lenght
+    int len = str.length(); // string length
     int mul = fact(len);    // calculating factorial of whole length of string
     int count[CHAR] = {0};  // to store frequency of each char in string
 

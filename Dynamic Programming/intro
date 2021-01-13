@@ -1,0 +1,17 @@
+Dynamic Programming:
+    - an optimization over plain recursion.
+    * plain recursion : solve problem of size n, by using subproblem of size less than n.
+                        call the problem for subproblem using recursion and use their solution.
+    - Idea : is to reuse the solutions of subproblems when there are overlapping subproblems.
+
+    Implementation :
+        1.) Memoization(Top Down)
+        2.) Tabulation(Bottom Up)
+
+    Applications :
+        solutions of many problems are based on DP
+        - Bellman Ford Algorithm
+        - Floyd Warshall Algorithm (find shortest distance between every pair of vertex in graph)
+        - Diff Utility (based on Longest Common Subsequence problem) (to find difference between two files, used in Git)
+        - Search Closed Words (based on Edit Distance problem)
+        - Resource Allocation (0-1 knapsack)

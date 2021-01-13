@@ -1,4 +1,4 @@
-// program finding all subset or subsection of a given string
+// program finding all subsection of a given string
 
 #include <iostream>
 using namespace std;
