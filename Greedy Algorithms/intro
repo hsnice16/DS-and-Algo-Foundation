@@ -1,0 +1,40 @@
+Greedy Algorithms :
+    - mostly used for optimization problems
+    - for problems in which we have minimize( like shortest path)
+      or maximize(heaviest weight in some weights) something.
+
+    General Structure :
+    getOptimal(Item arr[], int n)
+    1. Initialize : res = 0
+    2. while(All items)
+      {
+        i = selectAnItem()  // we can select min or max item , or we can
+                            // first sort the item and select from them
+        if(feasible(i))
+            res = res + i
+      }
+    3. return res
+
+    Problem with Greedy :
+        greedy algorithms may not work always
+        for example :
+            for minimum coin problem(min_coin file) , if we take random coin
+            values like, coin_values[] = [18, 1, 10] and try to find minimum
+            number of coins for rupees = 20. it will give 3 (1-18, 2-1), while
+            answer should be 2 (2-10).
+
+            In longest path problem also, it doesn't works properly.
+
+    Applications :
+        1. used for many standard problems :
+                Finding Optimal Solutions
+                        Activity Selection
+                        Fractional Knapsack
+                        Job Sequencing
+                        Prim's Algorithm
+                        Kruskal's Algorithm
+                        Dijkstra's Algorithm
+                        Huffman Coding
+        2. finding close to optimal solutions
+           for NP(no polynomial) Hard Problems like
+            Travelling Salesman Problem.
