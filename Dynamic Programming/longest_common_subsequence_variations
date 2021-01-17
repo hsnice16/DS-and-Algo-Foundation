@@ -1,0 +1,21 @@
+1. Diff Utility - difference between two files, used in git
+
+2. Minimum insertions and deletions to convert s1 into s2 :
+    like , s1 = "GEEK" & s2 = "GEFK" . minimum 1 deletion and
+    1 insertion required.
+
+3. Shortest Common Supersequence : like , s1 = "GEEK" & s2 = 
+    "GEFK". One Shortest Common Supersequence is "GEEFK".
+
+4. Longest Palindromic Subsequence : s = "GEEKSFORGEEKS" , 
+    length of LPS is 5 (EESEE, or EEFEE, etc).
+    How we can solve it, take t = "SKEEGROFSKEEG" (reverse of
+    s) , then find longest common subsequence.
+
+5. Longest Repeating Subsequence : let s = "AABB", LRS is 2.
+    How we can solve it, take t = "AABB" , now find same character
+    in both strings at different index.
+
+6. Space Optimized DP solution of LCS .
+
+7. Printing LCS

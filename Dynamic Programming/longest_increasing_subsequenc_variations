@@ -1,0 +1,44 @@
+1. Minimum deletions to make an array sorted : Given unsorted array,
+    like arr[] = {5, 10, 3, 6, 7, 8}. minimum deletions required is 2
+    either {5, 10} or {10, 3}.
+
+2. Maximum Sum Increasing Subsequence : 
+    Little changes in LIS code -
+    int lis_arr[size];  
+
+    for (int i = 0; i < size; i++)
+    {
+        lis_arr[i] = arr[i];
+        for (int j = 0; j < i; j++)
+        {
+            if (arr[j] < arr[i])
+                lis_arr[i] = max(lis_arr[i], lis_arr[j] + arr[i]);
+        }
+    }
+    return *max_element(lis_arr, lis_arr + size);
+
+3. Maximum Length Bitonic Subsequence : Bitonic Subsequence - sequence 
+    that is first increasing and then decreasing (array sorted in increasing
+    or decreasing order are considered Bitonic Subsequence).
+    
+    How we can find ? first find length of longest increasing subsequence from
+    left end as start point, and then from right end as start point. Then find
+    maximum (lis_left[i] + lis_right[i] -1).
+
+4. Building Bridges : Given an array of pair of cities, like I/P : {(6, 2), 
+    (4, 3), (2, 6), (1, 5)} , in which first element of pair is on one side of
+    Bridge and other element is on the other side of Bridge.
+
+    No two bridge should cross each other , and we have to maximize no. of 
+    bridges we can make . 
+
+    Idea : 
+    (1) Sort the array in increasing order of first value of pair. if two
+    first values are same ,like (2, 6) and (2, 3), then consider second value.
+
+    (2) Find LIS of the sorted array a/c to second values.
+
+5. Longest Chain of Pairs : If we have, (a, b), then a < b always. 
+    Idea :
+    (1) Sort the array of pairs a/c to first values.
+    (2) Find the LIS of sorted array (using condition arr[i+1].first > arr[i].second).
