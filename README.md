@@ -8,6 +8,10 @@ Contains files, I created during my learning of DS and Algo Foundation from Geek
   
   ![](/images/greedy_intro.PNG)
 
+* [String/check_anagram.cpp](https://github.com/Himanshu16Singh/DS-and-Algo-Foundation/blob/main/String/check_anagram.cpp)
+
+  ![](/images/string_anagram)
+
 ## During this learning, things I posted :
 * [#Day2OfProgramming](https://twitter.com/himaNSHU_seeNGH/status/1346761568743145479)
 * [Count Connected Component Problem](https://twitter.com/himaNSHU_seeNGH/status/1346405283862466561)
