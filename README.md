@@ -3,6 +3,9 @@ Programs of learning (GeeksForGeeks)
 
 Contains files, I created during my learning of DS and Algo Foundation from GeeksForGeeks.
 
+## Some Sample of Contents :
+![Greedy Algorithms/intro](/images/greedy_intro.PNG)
+
 ## During this learning, things I posted :
 * [#Day2OfProgramming](https://twitter.com/himaNSHU_seeNGH/status/1346761568743145479)
 * [Count Connected Component Problem](https://twitter.com/himaNSHU_seeNGH/status/1346405283862466561)
