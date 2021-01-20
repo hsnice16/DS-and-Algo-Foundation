@@ -4,7 +4,7 @@ Programs of learning (GeeksForGeeks)
 Contains files, I created during my learning of DS and Algo Foundation from GeeksForGeeks.
 
 ## Some Sample of Contents :
-* [Greedy Algorithms/intro](/Greedy Algorithms/intro)
+* [Greedy Algorithms/intro](https://github.com/Himanshu16Singh/DS-and-Algo-Foundation/blob/main/Greedy%20Algorithms/intro)
 ![](/images/greedy_intro.PNG)
 
 ## During this learning, things I posted :
